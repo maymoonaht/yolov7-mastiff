@@ -50,7 +50,7 @@ The following will train a YOLOv7 model on the dataset specified in `data/signal
 
 The yaml files consistent with the [original YOLOv7 repo](https://github.com/WongKinYiu/yolov7) were updated in this fork to point to your dataset directory after running the datagenerator from [MASTIFF Gym](https://github.com/vtnsi/mastiff).
 
- # train yolov7x model
+ ### train yolov7x model
 ``` shell    
 python train.py --device 0 --batch-size 20 --data data/signals.yaml --img 640 640 --cfg cfg/training/yolov7x.yaml --weights '' -name yolov7 --hyp data/hyp.scratch.custom.signal.yaml --epochs 5
 
