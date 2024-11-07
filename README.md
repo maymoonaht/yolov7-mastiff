@@ -63,10 +63,10 @@ Instead of training from scratch, you can also transfer learn from a weight chec
 
 ``` shell
 # finetune from checkpoint weights
-python train.py --device 0 --batch-size 20 --data data/custom.yaml --img 640 640 --cfg cfg/training/yolov7-custom.yaml --weights '<path/to/checkpoint>.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml
+python train.py --device 0 --batch-size 20 --data data/custom.yaml --img 640 640 --cfg cfg/training/yolov7-custom.yaml --weights '<path/to/checkpoint>.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.signal.yaml --single-cls
 ```
 By default the training script saves the best model every 5 epochs.
-For a full list of options in the script, run `python3 train.py --help`
+For a full list of options in the script, run `python train.py --help`
 
 ## Testing
 
@@ -82,12 +82,12 @@ This will return detections on an image or folder of images. The results will be
 
 On image:
 ``` shell
-python detect.py --weights <path/to/final>.pt --conf 0.25 --img-size 640 --source <path/to/images>.png
+python detect.py --weights <path/to/final>.pt --conf 0.25 --img-size 640 --no-trace --source <path/to/images>.png
 ```
 
 On folder of images:
 ``` shell
-python detect.py --weights <path/to/final>.pt --conf 0.25 --img-size 640 --source <path/to/images>/
+python detect.py --weights <path/to/final>.pt --conf 0.25 --img-size 640 --no-trace --source <path/to/images>/
 ```
 
 ## Citation
