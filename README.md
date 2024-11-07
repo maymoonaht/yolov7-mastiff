@@ -4,7 +4,7 @@ This repo is an adaptation of the [original YOLOv7 repo](https://github.com/Wong
 
 
 Here are some sample images after training a YOLOv7x model to detect all signals (left) and zigbee only (right).
-![all_sigs1](https://github.com/user-attachments/assets/69d11c96-3212-4ad5-bc56-f69945d2167a)|![step_9000](https://github.com/user-attachments/assets/8be9105d-2473-4889-95a1-87b724ee6984)
+[all_sigs1](https://github.com/user-attachments/assets/69d11c96-3212-4ad5-bc56-f69945d2167a)|[step_9000](https://github.com/user-attachments/assets/8be9105d-2473-4889-95a1-87b724ee6984)
 
 ## Installation
 
