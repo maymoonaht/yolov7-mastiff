@@ -57,7 +57,7 @@ python train.py --device 0 --batch-size 20 --data data/signals.yaml --img 640 64
 
 Note that `--weights` is an empty string, learning from a random weights initialization, instead of transfer learning. `--data` is the location of your dataset, so change the paths in `signals.yaml` accordingly. `--hyp` was changed slightly to stop flipping, since signals do not look different when flipped. However, hyp.scratch.custom.signal.yaml can be changed to suit future training. `--batch-size` and `--device` will need to be changed to suit the capabilities of the device you are running on.
 
-## Transfer learning
+## Transfer Learning
 
 Instead of training from scratch, you can also transfer learn from a weight checkpoint. For example, you can transfer learn starting with weights of the models linked in the [MASTIFF Gym](https://github.com/vtnsi/mastiff).
 
@@ -74,18 +74,6 @@ This returns the results for the whole test set
 
 ``` shell
 python test.py --data data/signals.yaml --img 640 --batch 16 --conf 0.001 --iou 0.45 --device 0 --weights '<path/to/weights>.pt' --name yolov7_640_val
-```
-
-
-## Transfer learning
-
-If you already have a base model and want to further train the weights from where you left off, use transfer learning. The only difference is the --weights parameter now points to the checkpoint .pt file.
-
-Single GPU finetuning for custom dataset
-
-``` shell
-# finetune from checkpoint weights
-python train.py --device 0 --batch-size 20 --data data/custom.yaml --img 640 640 --cfg cfg/training/yolov7-custom.yaml --weights '<path/to/checkpoint>.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml
 ```
 
 ## Inference
