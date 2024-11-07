@@ -93,7 +93,12 @@ This will return detections on an image or folder of images. The results will be
 
 On image:
 ``` shell
-    python detect.py --weights <path/to/final>.pt --conf 0.25 --img-size 640 --source <path/to/images>.png
+python detect.py --weights <path/to/final>.pt --conf 0.25 --img-size 640 --source <path/to/images>.png
+```
+
+On folder of images:
+``` shell
+python detect.py --weights <path/to/final>.pt --conf 0.25 --img-size 640 --source <path/to/images>/
 ```
 
 ## Citation
