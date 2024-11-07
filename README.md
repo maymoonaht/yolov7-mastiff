@@ -53,6 +53,7 @@ The yaml files consistent with the [original YOLOv7 repo](https://github.com/Won
  ### train yolov7x model
 ``` shell    
 python train.py --device 0 --batch-size 20 --data data/signals.yaml --img 640 640 --cfg cfg/training/yolov7x.yaml --weights '' -name yolov7 --hyp data/hyp.scratch.custom.signal.yaml --epochs 5
+```
 
 Note that `--weights` is an empty string, learning from a random weights initialization, instead of transfer learning. `--data` is the location of your dataset, so change the paths in `signals.yaml` accordingly. `--hyp` was changed slightly to stop flipping, since signals do not look different when flipped. However, hyp.scratch.custom.signal.yaml can be changed to suit future training. `--batch-size` and `--device` will need to be changed to suit the capabilities of the device you are running on.
 
